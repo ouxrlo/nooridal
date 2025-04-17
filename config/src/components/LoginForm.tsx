@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { loginWithEmailPassword, signUpWithEmailPassword, LoginCredentials } from '@/lib/auth'
 import Image from 'next/image'
 import { Logo } from './Logo'
+import { useRouter } from 'next/navigation'
 
 export default function LoginForm() {
   const [isLogin, setIsLogin] = useState(true)
@@ -12,6 +13,7 @@ export default function LoginForm() {
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [rememberMe, setRememberMe] = useState(false)
+  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -50,17 +52,17 @@ export default function LoginForm() {
               <div className="absolute w-[308px] h-[45px] top-[223px] left-[81px]">
                 <div className="relative w-[306px] h-[45px]">
                   <div className="h-10 top-[5px] left-0 bg-[#ffed8f] absolute w-[306px] rounded-[20px]" />
-                  <div className="w-[260px] top-0 left-4 text-[#353535] text-[15px] absolute font-normal text-center tracking-[0] leading-[50px] whitespace-nowrap">
+                  <div className="w-[260px] top-0 left-4 text-[#353535] text-[15px] absolute font-do-hyeon text-center tracking-[0] leading-[50px] whitespace-nowrap">
                     로그인
                   </div>
                 </div>
               </div>
 
-              <div className="w-[58px] top-[19px] left-20 text-[#000000b8] text-[15px] absolute font-normal text-center tracking-[0] leading-[50px] whitespace-nowrap">
+              <div className="w-[58px] top-[19px] left-20 text-[#000000b8] text-[15px] absolute font-do-hyeon text-center tracking-[0] leading-[50px] whitespace-nowrap">
                 아이디
               </div>
 
-              <div className="w-[81px] top-[104px] left-[73px] text-[#000000b8] text-[15px] absolute font-normal text-center tracking-[0] leading-[50px] whitespace-nowrap">
+              <div className="w-[81px] top-[104px] left-[73px] text-[#000000b8] text-[15px] absolute font-do-hyeon text-center tracking-[0] leading-[50px] whitespace-nowrap">
                 비밀번호
               </div>
 
@@ -72,7 +74,7 @@ export default function LoginForm() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="아이디를 입력하세요"
-                      className="h-[34px] top-[7px] left-1 bg-white border border-solid border-[#d9d9d9] absolute w-[306px] rounded-[20px] px-4 text-[15px]"
+                      className="h-[34px] top-[7px] left-1 bg-white border border-solid border-[#d9d9d9] absolute w-[306px] rounded-[20px] px-4 text-[15px] font-do-hyeon"
                       required
                     />
                   </div>
@@ -85,7 +87,7 @@ export default function LoginForm() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="비밀번호를 입력하세요"
-                      className="h-[34px] top-[7px] left-1 bg-white border border-solid border-[#d9d9d9] absolute w-[306px] rounded-[20px] px-4 text-[15px]"
+                      className="h-[34px] top-[7px] left-1 bg-white border border-solid border-[#d9d9d9] absolute w-[306px] rounded-[20px] px-4 text-[15px] font-do-hyeon"
                       required
                     />
                   </div>
@@ -99,33 +101,33 @@ export default function LoginForm() {
                       onChange={(e) => setRememberMe(e.target.checked)}
                       className="form-checkbox h-4 w-4 text-[#ffd500]"
                     />
-                    <span className="text-black text-[13px]">로그인 유지</span>
+                    <span className="text-black text-[13px] font-do-hyeon">로그인 유지</span>
                   </label>
                 </div>
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="absolute w-[306px] h-[45px] top-[223px] left-[81px] bg-[#ffed8f] rounded-[20px] text-[#353535] text-[15px] font-normal"
+                  className="absolute w-[306px] h-[45px] top-[223px] left-[81px] bg-[#ffed8f] rounded-[20px] text-[#353535] text-[15px] font-do-hyeon"
                 >
                   {loading ? '처리 중...' : '로그인'}
                 </button>
               </form>
 
               <div className="absolute w-[306px] top-[366px] left-[81px] flex justify-between items-center">
-                <button className="text-black text-[15px] ml-4">ID 찾기</button>
+                <button className="text-black text-[15px] ml-4 font-do-hyeon">ID 찾기</button>
                 <span className="text-gray-400">|</span>
-                <button className="text-black text-[15px]">PW 찾기</button>
+                <button className="text-black text-[15px] font-do-hyeon">PW 찾기</button>
                 <span className="text-gray-400">|</span>
                 <button 
-                  onClick={() => setIsLogin(false)}
-                  className="text-[#ffd500] text-[15px] mr-8"
+                  onClick={() => router.push('/signup')}
+                  className="text-[#ffd500] text-[15px] mr-8 font-do-hyeon"
                 >
                   회원가입
                 </button>
               </div>
 
-              <div className="absolute w-[95px] top-[441px] left-[185px] text-[#656565] text-xs text-center">
+              <div className="absolute w-[95px] top-[441px] left-[185px] text-[#656565] text-xs text-center font-do-hyeon">
                 간편 로그인
               </div>
 

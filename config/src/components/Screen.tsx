@@ -55,6 +55,16 @@ export const Screen = () => {
             />
           </div>
 
+          <div className="absolute w-[200px] h-[100px] top-[100px] left-[220px] pointer-events-none z-10">
+            <Image
+              className="object-contain"
+              alt="하늘색 구름"
+              src="/images/logo/시작 - 하늘구름.png"
+              fill
+              priority
+            />
+          </div>
+
           <div className="absolute w-[180px] h-[80px] top-[180px] left-[120px] pointer-events-none">
             <Image
               className="object-contain"
