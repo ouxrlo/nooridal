@@ -9,7 +9,7 @@ export const LogoImage = () => {
       <Image
         className="w-[134px] h-[55px] object-cover"
         alt="Logo"
-        src="/images/logo/btng-1.png"
+        src="/images/logo/시작 - 온누리.png"
         width={134}
         height={55}
       />

@@ -45,21 +45,21 @@ export const Screen = () => {
             height={90}
           />
 
-          <div className="absolute w-[180px] h-[80px] top-[70px] left-[200px] pointer-events-none">
+          <div className="absolute w-[190px] h-[110px] top-[20px] left-[220px] pointer-events-none z-10">
             <Image
               className="object-contain"
-              alt="Group 128 로고"
-              src="/images/logo/Group 128.png"
+              alt="온누리"
+              src="/images/logo/시작 - 온누리.png"
               fill
               priority
             />
           </div>
 
-          <div className="absolute w-[250px] h-[100px] top-[160px] left-[75px] pointer-events-none">
+          <div className="absolute w-[180px] h-[80px] top-[180px] left-[120px] pointer-events-none">
             <Image
               className="object-contain"
-              alt="BTNG 로고"
-              src="/images/logo/btng-1.png"
+              alt="로고"
+              src="/images/logo/시작 - 로고.png"
               fill
               priority
             />
@@ -69,8 +69,8 @@ export const Screen = () => {
             className="absolute w-[45px] h-[45px] top-[130px] left-[60px] transform -rotate-12 pointer-events-none"
             alt="토깽이"
             src="/images/logo/시작 - 토깽이.png"
-            width={45}
-            height={45}
+            width={140}
+            height={140}
           />
           <Image
             className="absolute w-[45px] h-[45px] top-[100px] left-[190px] pointer-events-none"
@@ -102,7 +102,7 @@ export const Screen = () => {
           />
 
           <button 
-            className="absolute w-[170px] h-[50px] top-[300px] left-[115px] cursor-pointer transition-transform hover:scale-105 active:scale-95 focus:outline-none z-10"
+            className="absolute w-[170px] h-[50px] top-[320px] left-[115px] cursor-pointer transition-transform hover:scale-105 active:scale-95 focus:outline-none z-10"
             onClick={handleStartClick}
           >
             <Image
